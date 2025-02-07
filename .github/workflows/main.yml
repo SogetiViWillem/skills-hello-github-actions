@@ -1,0 +1,21 @@
+name: Create Hello World Artifact
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Create Hello World file
+      run: echo "Hello, World!" > hello_world.txt
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: hello-world-artifact
+        path: hello_world.txt
