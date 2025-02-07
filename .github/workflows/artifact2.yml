@@ -1,6 +1,6 @@
 name: Artifact2
 on:
-  workflow-dispatch:
+  workflow_dispatch:
 jobs:
   job_1:
     name: Upload File
